@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+    <head>
+<title>Javascript Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <script> 
+    //To check if a number is even or odd
+     function evenOdd() {
+      num = prompt("Enter number: ");
+       
+       if(num % 2 === 0) {
+        document.getElementById("demo1").innerHTML = num + " is Even";
+       }
+       else {
+        document.getElementById("demo1").innerHTML = num + " is Odd";
+        // return num + " is Odd";
+       }
+      }
+     
+     //how to find the largest of two numbers
+     function largest(num1, num2) {
+     
+       let large = Math.max(num1, num2)
+       document.getElementById("demo1").innerHTML = large;
+     }
+     
+     
+     console.log(largest(18, 5))
+    
+     
+     //getiing day
+     function getDay() {
+       let today = new Date().getDay();
+       let day;
+     
+       switch(today) {
+         case 0: day = "Day 1 Sunday";
+         break;
+     
+         case 1: day = "Day 2 Monday";
+         break;
+     
+         case 2: day = "Day 3Tuesday";
+         break;
+     
+         case 3: day = "Day 4 Wednesday";
+         break;
+     
+         case 4: day = "Day 5 Thursday";
+         break;
+     
+         case 5: day = "Day 6 Friday";
+         break;
+     
+         case 6: day = "Day 7 Saturday";
+         break;
+       }
+       document.getElementById("demo1").innerHTML = day;
+       return day;
+     }
+     
+     console.log(getDay())
+     
+     //finding score
+     function getValue(score) {
+     
+     
+       if(score >= 70 && score <= 100) {
+         grade = "Excellent";  
+       document.getElementById("demo1").innerHTML = grade;
+       }
+     
+         else if(score >= 50 && score <= 69)
+     {
+         grade = "Very good"; console.log(grade);
+       document.getElementById("demo1").innerHTML = grade;
+       }
+     
+         else if (score >= 35 && score <= 49)
+        
+         { grade = "Good";
+       document.getElementById("demo1").innerHTML = grade;
+       }
+     
+       else if (score >= 0 && score <= 34)
+       { grade = "Poor";
+       document.getElementById("demo1").innerHTML = grade;
+     }
+     
+     else {
+       grade = "Failed";
+       document.getElementById("demo1").innerHTML = grade;
+     }
+     
+     return grade;
+     }
+     
+     console.log(Grade(57));
+     
+     
+     
+     //using while loop
+     function getValue(){
+     let counter = 0 ;
+        let value = "";
+    
+        while(counter < 10  ){
+            value += "The counted value is " + counter + "<br/>" ;
+            console.log("checking value " + counter);
+            counter++ ;
+            }
+            document.getElementById("demo1").innerHTML = value;
+     }
+     </script>
+  <body>
+  <h1>Javascript assignment</h1>
+  
+  <p id="demo1">The count is:{value}</p>
+  
+  
+  <button type="button" onClick="getValue()">While Operation</button>
+    <hr/>
+  <button type="button" onClick="Grade(51)">Grade Operation</button>
+  <hr/>
+  <button type="button" onClick="getDay()">Week Operation</button>
+    <hr/>
+  <button type="button" onClick="evenOdd()">Num Operation</button>
+  <hr/>
+  <button type="button" onClick="largest(32, 85)">Largest Number Operation</button>
+  
+ 
+  </body>
+</html>
